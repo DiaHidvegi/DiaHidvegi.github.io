@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dia Hidvégi</title>
+  <meta name="description" content="Dia Hidvégi is a data scientist building tools that drive optimal decisions under complex constraints, across robotics, geospatial, healthcare and finance.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👋</text></svg>">
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="brand" href="#top">Dia Hidvegi</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- Hero -->
+    <section class="hero gradient-bg">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <h1 class="mono">hello world!</h1>
+          <p class="lead">
+            Warm welcome! My name is Dia Hidvégi.<br>
+            I'm a data scientist. I love building tools that drive optimal decisions under complex constraints - across sectors like robotics, geospatial, healthcare or finance.
+          </p>
+          <p class="lead">Check out some of my past projects below! 😎</p>
+          <a class="btn" href="#projects">View Projects</a>
+        </div>
+        <div class="hero-photo">
+          <img src="assets/profile.jpg" alt="Dia Hidvégi smiling in a garden, holding a parcel">
+        </div>
+      </div>
+    </section>
+
+    <!-- Jungle band -->
+    <div class="band band-jungle" role="presentation"></div>
+
+    <!-- About in numbers -->
+    <section id="about" class="numbers gradient-bg gradient-bg--soft">
+      <div class="container">
+        <h2 class="section-title">About me in numbers</h2>
+        <ul class="stats">
+          <li>
+            <span class="stat-value">4</span>
+            <span class="stat-label">The total number of countries I have worked or studied in that start with the letter "S": Sweden, Singapore, Saudi Arabia and Switzerland.</span>
+          </li>
+          <li>
+            <span class="stat-value">157,2</span>
+            <span class="stat-label">The longest path in km that I have ever biked - from Visby to Fårö and back, on the island of Gotland in Sweden.</span>
+          </li>
+          <li>
+            <span class="stat-value">6</span>
+            <span class="stat-label">The total number of musical instruments I can play.</span>
+          </li>
+          <li>
+            <span class="stat-value">43,2</span>
+            <span class="stat-label">The longest path in km that I have ever ran.</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="projects-intro gradient-bg gradient-bg--projects">
+      <div class="container">
+        <h2 class="projects-heading">Projects</h2>
+        <p class="projects-sub">A small selection of data science projects I have worked on.</p>
+      </div>
+    </section>
+
+    <article class="project project--light">
+      <div class="container">
+        <h3>Curriculum Learning for Visual Model-Based RL for Continuous Robotics Tasks</h3>
+        <p class="meta">Autonomous Learning and Predictive Intelligence Lab, UZH, 2025. Supervisors: Prof Dr Giorgia Ramponi</p>
+        <p>Investigated the implications of curriculum learning on DreamerV3 training, specifically to improve convergence speed and sample efficiency. We designed and evaluated progressive training curricula across vision-based control tasks and compared performance with baseline training approaches, demonstrating conditions under which curriculum learning significantly accelerates policy convergence.</p>
+        <figure class="figure figure--single">
+          <img src="assets/curriculum-learning.png" alt="Smoothed learning curves comparing curriculum training against the baseline over 800 thousand training steps">
+        </figure>
+        <p class="stack"><span>Stack:</span>
+          <a href="https://docs.jax.dev/en/" target="_blank" rel="noopener">JAX</a>
+          <a href="https://gymnasium.farama.org/environments/mujoco/" target="_blank" rel="noopener">MuJoCo</a>
+          <a href="https://github.com/danijar/dreamerv3" target="_blank" rel="noopener">DreamerV3</a>
+          <a href="https://fastapi.tiangolo.com/" target="_blank" rel="noopener">FastAPI</a>
+          <a href="https://www.docker.com/" target="_blank" rel="noopener">Docker</a>
+        </p>
+      </div>
+    </article>
+
+    <article class="project project--dark">
+      <div class="container">
+        <h3>Energy-efficient Path Planning for Autonomous Drones</h3>
+        <p class="meta">Robotics &amp; Perception Group, UZH, 2025. Supervisors: Leonard Bauersfeld, Prof Dr Davide Scaramuzza</p>
+        <p>Traditional sampling based path planning methods often struggle to accurately account for complex drone dynamics when evaluating the cost and feasibility of a path to a sampled point. Our work is based on 3D Dubins curve infused RRT*, which allows us to constrain drone dynamics through the help of 3D Dubins curved paths, while expanding the state space to include energy-related variables such as velocity and indirectly, the curvature of the turns, in order to minimize the energy expenditure of the drone for the planned path.</p>
+        <figure class="figure figure--pair">
+          <img src="assets/drone-energy-velocity.png" alt="Energy per unit length and power consumption as a function of velocity">
+          <img src="assets/drone-energy-radii.png" alt="Energy consumption as a function of velocity for different turning radii">
+        </figure>
+        <p class="stack"><span>Stack:</span>
+          <a href="https://github.com/ros-infrastructure/www.ros.org" target="_blank" rel="noopener">ROS</a>
+          <a href="https://github.com/uzh-rpg/agilicious" target="_blank" rel="noopener">Agilicious</a>
+          <a href="https://github.com/AtsushiSakai/PythonRobotics" target="_blank" rel="noopener">PythonRobotics</a>
+        </p>
+      </div>
+    </article>
+
+    <article class="project project--light">
+      <div class="container">
+        <h3>Visual Odometry Pipeline</h3>
+        <p class="meta">Robotics &amp; Perception Group, 2024. Collaborators: Jakob Schlichting, Nicolas Schuler, Maximilian Stralz</p>
+        <p>A monocular visual odometry pipeline which estimates the camera motion across 3 datasets (KITTI, Malaga and Parking). It consists of two main parts: Initialization and Continuous Tracking. Initial features are detected using Shi-Tomasi corner detector, features are tracked using Lucas Kanade optical flow, the poses are estimated through P3P-RANSAC, and the poses are refined using Gauss Newton optimization. The code can be found <a href="https://github.com/DiaHidvegi/visual-odometry" target="_blank" rel="noopener">here</a>.</p>
+        <figure class="figure figure--single">
+          <img src="assets/visual-odometry.jpg" alt="Visual odometry dashboard showing tracked landmarks on a street frame, landmark counts, and the global and local trajectories">
+        </figure>
+        <p class="stack"><span>Stack:</span>
+          <a href="https://github.com/opencv/opencv" target="_blank" rel="noopener">OpenCV</a>
+          <a href="https://numpy.org/" target="_blank" rel="noopener">NumPy</a>
+          <a href="https://scipy.org/" target="_blank" rel="noopener">SciPy</a>
+        </p>
+      </div>
+    </article>
+
+    <article class="project project--dark">
+      <div class="container">
+        <h3>Knowledge Graph Retrieval-Based LLM Agent for Factual Querying</h3>
+        <p class="meta">UZH, 2024. Collaborators: Raffael Botschen</p>
+        <p>A chat agent able to respond to natural language user queries based on factual information retrieved from free text documents represented in the form of multiple knowledge graphs. Relied on Llama API for prompt engineered query classification and for natural language response generation. The system generates SPARQL queries to accurately retrieve information from the knowledge graphs, and performs prior entity matching for node filtering. This approach enabled accurate, context-aware answers through structured knowledge graph retrieval while maintaining natural language interactions between the user and the agent on the frontend.</p>
+        <p class="stack"><span>Stack:</span>
+          <a href="https://github.com/ollama/ollama" target="_blank" rel="noopener">Ollama</a>
+          <a href="https://numpy.org/" target="_blank" rel="noopener">NumPy</a>
+          <a href="https://scipy.org/" target="_blank" rel="noopener">SciPy</a>
+          <a href="https://rdflib.readthedocs.io" target="_blank" rel="noopener">RDFLib</a>
+          <a href="https://www.w3.org/TR/sparql11-query/" target="_blank" rel="noopener">SPARQL</a>
+        </p>
+      </div>
+    </article>
+
+    <article class="project project--light">
+      <div class="container">
+        <h3>Geospatial Site Selection Engine</h3>
+        <p class="meta">Intelmatix, 2022 - present</p>
+        <p>A location intelligence engine that models the urban dynamics of a city to perform tasks such as real estate valuation or site selection for a new QSR branch. Relying on a graph-based saturation model, a branch cannibalization model, accessibility scoring for POIs and demographic groups, route optimization, and a catchment model, it can predict the future sales for unknown locations and recommend the highest-impact site for a new branch to open within the city.</p>
+        <p>The value prediction model receives inputs such as accessibility scores, market saturation, cannibalization score calculated based on the catchment of a location and its road network around it, and several demographic variables. This value prediction model can be trained to predict outputs such as future sales for a site, or the value of a land or real estate. Thanks to this flexibility on the target variable, the site selection engine can be scaled to several use cases that relate to urban and geospatial analytics.</p>
+        <figure class="figure figure--pair">
+          <img src="assets/accessibility-heatmap.png" alt="Heatmap of accessibility scores for 853 parcels zoned for restaurants">
+          <img src="assets/accessibility-distance.png" alt="Accessibility score for Saudi females aged 20 to 35 from their work locations to a fast food branch in Riyadh, plotted against distance">
+        </figure>
+        <p class="stack"><span>Stack:</span>
+          <a href="https://pytorch.org/" target="_blank" rel="noopener">PyTorch</a>
+          <a href="https://scikit-learn.org/" target="_blank" rel="noopener">scikit-learn</a>
+          <a href="https://numpy.org/" target="_blank" rel="noopener">NumPy</a>
+          <a href="https://fastapi.tiangolo.com/" target="_blank" rel="noopener">FastAPI</a>
+          <a href="https://www.docker.com/" target="_blank" rel="noopener">Docker</a>
+          <a href="https://aws.amazon.com/s3/" target="_blank" rel="noopener">AWS S3</a>
+        </p>
+      </div>
+    </article>
+
+    <article class="project project--dark">
+      <div class="container">
+        <h3>Healthcare Policy Simulator</h3>
+        <p class="meta">Intelmatix, 2022 - present</p>
+        <p>A policy simulation engine that identifies the relationships between the development of the healthcare practitioner workforce in a country and various government policy changes related to immigration, medical education, workforce allocation, and employment requirements.</p>
+        <p>The effect of policy changes are measured by the resulting number of practitioners per 1000 population per specialization. At the beginning of every simulation year a new trainee cohort is initialized for each specialization with particular characteristics such as demographics and university GPA. Each trainee agent acts according to their own specialization requirements and training center environment. For example, they might take various exams, decide to take a gap year, switch specializations, or perhaps abort or drop out. Eventually, the graduated trainees become senior registrars, who later may become consultants. At the end of the simulation the total workforce is captured.</p>
+        <p>The goal is to support healthcare system decision-makers in understanding the impact of potential policies and recommend them the right policy based on the national targets such as reaching a certain number of registered nurses or improving healthcare training quality.</p>
+        <p class="stack"><span>Stack:</span>
+          <a href="https://mesa.readthedocs.io" target="_blank" rel="noopener">Mesa</a>
+          <a href="https://fastapi.tiangolo.com/" target="_blank" rel="noopener">FastAPI</a>
+          <a href="https://www.docker.com/" target="_blank" rel="noopener">Docker</a>
+          <a href="https://aws.amazon.com/s3/" target="_blank" rel="noopener">AWS S3</a>
+        </p>
+      </div>
+    </article>
+
+    <article class="project project--light">
+      <div class="container">
+        <h3>Unstructured Financial Data Extractor</h3>
+        <p class="meta">Dealogic, 2021 - 2022</p>
+        <p>A data wrangling and extraction engine that relies on various NLP methods such as named-entity recognition, sentiment analysis, and text mining in order to extract highly accurate financial data from unstructured sources like free text in legal documents published by the US Stock Exchange Commission.</p>
+        <p>The goal of the project was to build a graph database to store the relationships of special purpose acquisition companies (SPACs), their acquired companies, their sponsors and sponsor affiliates, as well as all involved individuals' connections to these entities. In addition to capturing such relationships, we also wanted to collect additional information about the entities themselves, such as stock and warrant prices, ticker symbols and stock exchanges, purchase conditions and warrant expiry dates, etc.</p>
+        <p>The raw filings are collected and the data points are extracted near real-time, with minimal delay after publication on SEC. A NER model was trained on historical SEC documents, and it is able to process and extract data from various filing types such as 424B4, S10, quarterly and annual reports.</p>
+      </div>
+    </article>
+
+    <article class="project project--dark">
+      <div class="container">
+        <h3>Automated Credit Underwriting Algorithm</h3>
+        <p class="meta">Anyfin, 2019 - 2020</p>
+        <p>A credit underwriting algorithm that takes in a loan applicant profile as an input, makes a decision on whether or not to offer them an option to refinance their loan. If an offer is made, the algorithm also recommends the optimal interest rate to the applicant based on an internal credit scoring model, their probability of default, payment history, previous loan applications, and other variables.</p>
+        <p>My most significant contribution to this algorithm was the improvement of our default prediction model by developing a new feature scoring method that relied on the apriori algorithm, weight of evidence and information value statistics.</p>
+      </div>
+    </article>
+
+    <article class="project project--light">
+      <div class="container">
+        <h3>Temporal Risk Evaluator of Rising Household Debt</h3>
+        <p class="meta">Stockholm University, 2019 - 2020</p>
+        <p>A risk assessment model that examines the effect of rising household debt on the financial markets in Sweden based on various time periods before, during and after the 2008 financial crisis.</p>
+        <p>For several years the household debt-to-GDP levels in Sweden have been close to that in the US prior to the 2008 financial crisis, coupled with a steady growth in housing prices. Considering the historical burst of the housing bubble in the US which triggered the crisis and had ripple effects on the financial markets, institutions such as the Swedish Central Bank and the National Institute of Economic Research in Sweden have been raising concerns.</p>
+        <p>This model was built to understand the market risk posed by the recent record high household debt-to-GDP levels, consisting mainly of mortgages, while controlling for variables such as consumer price index, repo rate, industrial production, oil prices, unemployment rate and household income. The financial markets were captured by major stock indices such as OMXS30, yield curves on long-term government bonds, and volatility indices like SIXVX.</p>
+      </div>
+    </article>
+
+    <article class="project project--dark">
+      <div class="container">
+        <h3>Renewable Energy Policy Recommender</h3>
+        <p class="meta">Stockholm University, 2018 - 2019</p>
+        <p>A comparative model of countries' approach to low-emission renewable energy policy under liberalized energy markets. The aim of the model is to identify high-impact policies for maximizing the share of renewable energy in a country's energy mix.</p>
+        <p>In one application we found that an indirect promotion mechanism through tax incentives with a combination of direct low-emission energy project subsidies, low market entry barriers, precisely measurable energy targets, and minimized regulatory changes significantly contributed to the record level share of renewable energy achieved by Denmark.</p>
+        <p>A country whose geography, economic environment and market conditions, technological maturity and grid capacity, as well as their cognitive environment and public awareness are similar to Denmark is likely to benefit from such policy interventions as well.</p>
+        <p>In this case, one of such countries is the Netherlands, whose historical policy decision points marked a key divergence from Denmark in their progress to maximize their rate of low-emission renewable energy sources compared to their gross national energy consumption.</p>
+      </div>
+    </article>
+
+    <!-- Jungle band -->
+    <div class="band band-jungle band-jungle--low" role="presentation"></div>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+      <div class="container contact-grid">
+        <div class="contact-info">
+          <h2>Contact</h2>
+          <ul class="contact-list">
+            <li>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1L6.6 10.8z"/></svg>
+              <a href="tel:+41772852332">+4177 285 2332</a>
+            </li>
+            <li>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 2.4V18h16V7.4l-8 5-8-5zM4 6.6l8 5 8-5H4z"/></svg>
+              <a href="mailto:dia.hidvegi@gmail.com">dia.hidvegi@gmail.com</a>
+            </li>
+            <li class="social">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 10h4v11H2zm6 0.5 4-8a2.5 2.5 0 0 1 2.5 2.5V9h5a2 2 0 0 1 2 2.3l-1.3 7.2A3 3 0 0 1 17.3 21H8V10.5zm1.5 1.1V19.5h7.8a1.5 1.5 0 0 0 1.5-1.2l1.2-6.8H13V5.4l-3.5 6.2z"/></svg>
+              <a class="social-link" href="http://github.com/DiaHidvegi" target="_blank" rel="noopener" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.6.5.5 5.6.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.6 18.4.5 12 .5z"/></svg>
+              </a>
+              <a class="social-link" href="https://www.linkedin.com/in/dianahidvegi/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.6.5.5 5.6.5 12S5.6 23.5 12 23.5 23.5 18.4 23.5 12 18.4.5 12 .5zM9 17.5H6.5v-8H9v8zM7.7 8.4a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm10.3 9.1h-2.5v-3.9c0-.9 0-2.1-1.3-2.1s-1.5 1-1.5 2v4H10.2v-8h2.4v1.1c.3-.6 1.2-1.3 2.4-1.3 2.6 0 3 1.7 3 3.9v4.3z"/></svg>
+              </a>
+              <a class="social-link" href="https://www.instagram.com/dianahidvegi/" target="_blank" rel="noopener" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.6.5.5 5.6.5 12S5.6 23.5 12 23.5 23.5 18.4 23.5 12 18.4.5 12 .5zm0 5.3c1.7 0 1.9 0 2.6.1 1.8.1 2.6.9 2.7 2.7v5.3c-.1 1.8-.9 2.6-2.7 2.7H9.4c-1.8-.1-2.6-.9-2.7-2.7V8.6c.1-1.8.9-2.6 2.7-2.7.7-.1.9-.1 2.6-.1zm0 1.1c-1.7 0-1.9 0-2.5.1-1.2 0-1.7.6-1.7 1.7v5.1c0 1.2.6 1.7 1.7 1.7h5c1.2 0 1.7-.6 1.7-1.7V8.7c0-1.2-.6-1.7-1.7-1.7-.6-.1-.8-.1-2.5-.1zm0 2.1a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm0 1.1a1.9 1.9 0 1 0 0 3.8 1.9 1.9 0 0 0 0-3.8zm3.1-1.9a.7.7 0 1 1 0 1.4.7.7 0 0 1 0-1.4z"/></svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-row">
+            <label>First Name<input type="text" name="first" autocomplete="given-name"></label>
+            <label>Last Name<input type="text" name="last" autocomplete="family-name"></label>
+          </div>
+          <label>Email *<input type="email" name="email" required autocomplete="email"></label>
+          <label>Message<textarea name="message" rows="4"></textarea></label>
+          <div class="form-actions">
+            <span class="form-note" id="form-note" aria-live="polite"></span>
+            <button type="submit" class="btn">Send</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Zürich band -->
+    <figure class="band band-zurich">
+      <img src="assets/zurich.jpg" alt="Aerial view of Zürich, Switzerland, with the lake and the Alps on the horizon">
+      <figcaption>
+        Aerial View of Zürich, Switzerland.<br>
+        Photo by <a href="https://unsplash.com/@misterjackdaniel?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank" rel="noopener">Daniel R.</a> on <a href="https://unsplash.com/photos/an-aerial-view-of-a-city-and-a-body-of-water-J9AU2n6nQD0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank" rel="noopener">Unsplash</a>
+      </figcaption>
+    </figure>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year">2026</span> Dia Hidvégi</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // GitHub Pages has no server, so the form opens the visitor's mail client with the message prefilled.
+    document.getElementById('contact-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var f = e.target;
+      var note = document.getElementById('form-note');
+      var email = f.email.value.trim();
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        note.textContent = 'Please enter a valid email address.';
+        f.email.focus();
+        return;
+      }
+      var name = (f.first.value + ' ' + f.last.value).trim();
+      var subject = 'Message from ' + (name || email) + ' via dianahidvegi.github.io';
+      var body = f.message.value + '\n\n— ' + (name ? name + ' (' + email + ')' : email);
+      window.location.href = 'mailto:dia.hidvegi@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+      note.textContent = 'Thanks for your message!';
+      f.reset();
+    });
+  </script>
+</body>
+</html>
