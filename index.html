@@ -13,6 +13,9 @@
 </head>
 <body>
 
+  <!-- Fixed backdrop: sits behind everything; the jungle "bands" below are transparent windows onto it -->
+  <div class="jungle-fixed" aria-hidden="true"></div>
+
   <header class="site-header">
     <a class="brand" href="#top">Dia Hidvegi</a>
     <nav class="site-nav" aria-label="Main">
@@ -80,6 +83,42 @@
 
     <article class="project project--light">
       <div class="container">
+        <h3>Dexterous Manipulation via Embedded Posture Graphs of Hands with N-DoF</h3>
+        <p class="meta">Soft Robotics Lab, ETH Zürich, 2026. Supervisors: Chenyu Yang, Davide Liconti, Prof Dr Robert Katzschmann <span class="badge">Ongoing</span></p>
+        <p>Building a co-embedded graph of hand postures across end effectors with differing morphology and degrees of freedom, for generalized posture mapping. Our method captures posture connections and enables representation learning via a nonlinear manifold, learning a shared representation across hands.</p>
+        <p>The embedding acts as input to train a neural cross-embodiment retargeter between N-DoF hands, and as a compact posture representation for improved sample efficiency in RL-based and other downstream tasks.</p>
+      </div>
+    </article>
+
+    <article class="project project--dark">
+      <div class="container">
+        <h3>Vision-Language-Action Models for Pick-and-Place</h3>
+        <p class="meta">ETH Zürich, 2026</p>
+        <p>Fine-tuned SmolVLA, π0, π0.5, OpenVLA and FlowerVLA on LeRobot teleoperation demonstrations to sort objects into color-matched bowls, and to place objects on photos of out-of-distribution celebrities.</p>
+        <p class="stack"><span>Stack:</span>
+          <a href="https://github.com/huggingface/lerobot" target="_blank" rel="noopener">LeRobot</a>
+          <a href="https://huggingface.co/lerobot/smolvla_base" target="_blank" rel="noopener">SmolVLA</a>
+          <a href="https://github.com/Physical-Intelligence/openpi" target="_blank" rel="noopener">π0 / π0.5</a>
+          <a href="https://github.com/openvla/openvla" target="_blank" rel="noopener">OpenVLA</a>
+          <em>FlowerVLA</em>
+        </p>
+      </div>
+    </article>
+
+    <article class="project project--light">
+      <div class="container">
+        <h3>NAICS-Aware Graph Neural Networks for Large-Scale POI Co-visitation Prediction</h3>
+        <p class="meta">Intelmatix Labs, MIT, PSU, 2024 - 2025. Collaborators: Yazeed Alrubyli, Dr Omar Alomeir, Dr Abrar Wafa, Dr Hend Alrasheed, Dr Mohsen Bahrami</p>
+        <p>A novel GraphSAGE-based architecture that integrates learnable NAICS business taxonomy embeddings with multi-modal spatial-temporal features to predict population-level co-visitation patterns between 92,486 brands across 48 US states.</p>
+        <p>The model achieves a 157% improvement in R² over state-of-the-art baselines by learning business category relationships through end-to-end training on 45.3 million graph edges, enabling scalable edge regression on extremely sparse co-visitation networks.</p>
+        <p class="stack"><span>Paper:</span>
+          <a href="https://arxiv.org/abs/2507.19697" target="_blank" rel="noopener">arXiv:2507.19697</a>
+        </p>
+      </div>
+    </article>
+
+    <article class="project project--dark">
+      <div class="container">
         <h3>Curriculum Learning for Visual Model-Based RL for Continuous Robotics Tasks</h3>
         <p class="meta">Autonomous Learning and Predictive Intelligence Lab, UZH, 2025. Supervisors: Prof Dr Giorgia Ramponi</p>
         <p>Investigated the implications of curriculum learning on DreamerV3 training, specifically to improve convergence speed and sample efficiency. We designed and evaluated progressive training curricula across vision-based control tasks and compared performance with baseline training approaches, demonstrating conditions under which curriculum learning significantly accelerates policy convergence.</p>
@@ -96,9 +135,9 @@
       </div>
     </article>
 
-    <article class="project project--dark">
+    <article class="project project--light">
       <div class="container">
-        <h3>Energy-efficient Path Planning for Autonomous Drones</h3>
+        <h3>Energy-efficient Path Planning for Autonomous Drones in Inspection Tasks</h3>
         <p class="meta">Robotics &amp; Perception Group, UZH, 2025. Supervisors: Leonard Bauersfeld, Prof Dr Davide Scaramuzza</p>
         <p>Traditional sampling based path planning methods often struggle to accurately account for complex drone dynamics when evaluating the cost and feasibility of a path to a sampled point. Our work is based on 3D Dubins curve infused RRT*, which allows us to constrain drone dynamics through the help of 3D Dubins curved paths, while expanding the state space to include energy-related variables such as velocity and indirectly, the curvature of the turns, in order to minimize the energy expenditure of the drone for the planned path.</p>
         <figure class="figure figure--pair">
@@ -113,7 +152,7 @@
       </div>
     </article>
 
-    <article class="project project--light">
+    <article class="project project--dark">
       <div class="container">
         <h3>Visual Odometry Pipeline</h3>
         <p class="meta">Robotics &amp; Perception Group, 2024. Collaborators: Jakob Schlichting, Nicolas Schuler, Maximilian Stralz</p>
@@ -129,7 +168,7 @@
       </div>
     </article>
 
-    <article class="project project--dark">
+    <article class="project project--light">
       <div class="container">
         <h3>Knowledge Graph Retrieval-Based LLM Agent for Factual Querying</h3>
         <p class="meta">UZH, 2024. Collaborators: Raffael Botschen</p>
@@ -141,6 +180,14 @@
           <a href="https://rdflib.readthedocs.io" target="_blank" rel="noopener">RDFLib</a>
           <a href="https://www.w3.org/TR/sparql11-query/" target="_blank" rel="noopener">SPARQL</a>
         </p>
+      </div>
+    </article>
+
+    <article class="project project--dark">
+      <div class="container">
+        <h3>Vision-based Traffic Surveillance</h3>
+        <p class="meta">Intelmatix <span class="badge">Ongoing</span></p>
+        <p>Developing object detection and multi-object tracking models for vision-based traffic surveillance.</p>
       </div>
     </article>
 
@@ -167,10 +214,10 @@
 
     <article class="project project--dark">
       <div class="container">
-        <h3>Healthcare Policy Simulator</h3>
-        <p class="meta">Intelmatix, 2022 - present</p>
+        <h3>Healthcare Agent-based Policy Simulator with Learned Action Functions</h3>
+        <p class="meta">Intelmatix, 2022 - 2023</p>
         <p>A policy simulation engine that identifies the relationships between the development of the healthcare practitioner workforce in a country and various government policy changes related to immigration, medical education, workforce allocation, and employment requirements.</p>
-        <p>The effect of policy changes are measured by the resulting number of practitioners per 1000 population per specialization. At the beginning of every simulation year a new trainee cohort is initialized for each specialization with particular characteristics such as demographics and university GPA. Each trainee agent acts according to their own specialization requirements and training center environment. For example, they might take various exams, decide to take a gap year, switch specializations, or perhaps abort or drop out. Eventually, the graduated trainees become senior registrars, who later may become consultants. At the end of the simulation the total workforce is captured.</p>
+        <p>The effect of policy changes are measured by the resulting number of practitioners per 1000 population per specialization. At the beginning of every simulation year a new trainee cohort is initialized for each specialization with particular characteristics such as demographics and university GPA. Each trainee agent acts according to their own specialization requirements and training center environment. For example, they might take various exams, decide to take a gap year, switch specializations, or perhaps abort or drop out. Eventually, the graduated trainees become senior registrars, who later may become consultants. At the end of the simulation the total workforce is captured. Healthcare practitioners are modeled as workforce agents, with their various actions being predicted through classical machine learning algorithms.</p>
         <p>The goal is to support healthcare system decision-makers in understanding the impact of potential policies and recommend them the right policy based on the national targets such as reaching a certain number of registered nurses or improving healthcare training quality.</p>
         <p class="stack"><span>Stack:</span>
           <a href="https://mesa.readthedocs.io" target="_blank" rel="noopener">Mesa</a>
@@ -185,7 +232,7 @@
       <div class="container">
         <h3>Unstructured Financial Data Extractor</h3>
         <p class="meta">Dealogic, 2021 - 2022</p>
-        <p>A data wrangling and extraction engine that relies on various NLP methods such as named-entity recognition, sentiment analysis, and text mining in order to extract highly accurate financial data from unstructured sources like free text in legal documents published by the US Stock Exchange Commission.</p>
+        <p>A data wrangling and extraction engine that relies on various NLP methods such as named-entity recognition, sentiment analysis, and text mining in order to extract highly accurate financial data from unstructured sources like free text, PDFs, and legal documents published by the US Stock Exchange Commission.</p>
         <p>The goal of the project was to build a graph database to store the relationships of special purpose acquisition companies (SPACs), their acquired companies, their sponsors and sponsor affiliates, as well as all involved individuals' connections to these entities. In addition to capturing such relationships, we also wanted to collect additional information about the entities themselves, such as stock and warrant prices, ticker symbols and stock exchanges, purchase conditions and warrant expiry dates, etc.</p>
         <p>The raw filings are collected and the data points are extracted near real-time, with minimal delay after publication on SEC. A NER model was trained on historical SEC documents, and it is able to process and extract data from various filing types such as 424B4, S10, quarterly and annual reports.</p>
       </div>
