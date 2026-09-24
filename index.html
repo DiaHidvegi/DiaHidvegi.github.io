@@ -232,9 +232,9 @@
       <div class="container">
         <h3>Unstructured Financial Data Extractor</h3>
         <p class="meta">Dealogic, 2021 - 2022</p>
-        <p>A data wrangling and extraction engine that relies on various NLP methods such as named-entity recognition, sentiment analysis, and text mining in order to extract highly accurate financial data from unstructured sources like free text, PDFs, and legal documents published by the US Stock Exchange Commission.</p>
+        <p>A data wrangling and extraction engine that relies on custom-trained small language models to extract highly accurate financial data from thousands of unstructured sources, such as free text, PDFs, HTML pages, and legal documents published by the US Stock Exchange Commission.</p>
         <p>The goal of the project was to build a graph database to store the relationships of special purpose acquisition companies (SPACs), their acquired companies, their sponsors and sponsor affiliates, as well as all involved individuals' connections to these entities. In addition to capturing such relationships, we also wanted to collect additional information about the entities themselves, such as stock and warrant prices, ticker symbols and stock exchanges, purchase conditions and warrant expiry dates, etc.</p>
-        <p>The raw filings are collected and the data points are extracted near real-time, with minimal delay after publication on SEC. A NER model was trained on historical SEC documents, and it is able to process and extract data from various filing types such as 424B4, S10, quarterly and annual reports.</p>
+        <p>Streaming ETL pipelines collect the raw filings and extract the data points near real-time, with minimal delay after publication on SEC. The small language models were trained on historical SEC documents, and are able to process and extract data from various filing types such as 424B4, S10, quarterly and annual reports.</p>
       </div>
     </article>
 
