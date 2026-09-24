@@ -281,18 +281,6 @@ a { color: inherit; }
 }
 .project p a { text-decoration: underline; text-underline-offset: 3px; }
 
-.badge {
-  display: inline-block;
-  margin-left: 10px;
-  padding: 1px 9px;
-  border: 1px solid currentColor;
-  border-radius: 999px;
-  font-family: var(--sans);
-  font-size: 0.68rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  vertical-align: 1px;
-}
 .stack em { font-style: normal; }
 
 .figure { margin: 36px 0 40px; }
