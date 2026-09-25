@@ -217,15 +217,29 @@ const PROJECTS = [
     "title": "Vision-based Traffic Surveillance",
     "meta": "Intelmatix, 2026 - present",
     "paragraphs": [
-      "Developing object detection and multi-object tracking models for vision-based traffic surveillance."
+      "Object detection and multi-object tracking models for vision-based traffic surveillance, running on live camera streams.",
+      "Details are limited as this is ongoing company work."
     ],
     "figures": [],
-    "links": [],
+    "links_label": "Stack",
+    "links": [
+      {
+        "name": "RF-DETR",
+        "url": "https://github.com/roboflow/rf-detr"
+      },
+      {
+        "name": "YOLO26",
+        "url": "https://docs.ultralytics.com/models/yolo26/"
+      },
+      {
+        "name": "DeepStream",
+        "url": "https://developer.nvidia.com/deepstream-sdk"
+      }
+    ],
     "short": "Traffic Surveillance",
     "viz": {
-    "type": "traffic"
-  },
-    "links_label": "Stack"
+      "type": "traffic"
+    }
   },
   {
     "title": "Geospatial Site Selection Engine",

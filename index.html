@@ -8,13 +8,13 @@
   <meta name="color-scheme" content="light dark">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><circle cx='8' cy='8' r='6' fill='%23111'/></svg>">
 </head>
 <body>
+  <canvas class="drift" id="drift" aria-hidden="true"></canvas>
   <header class="top">
-    <a class="home" href="./" aria-current="page">Dia Hidvégi</a>
     <nav>
       <a href="projects.html">Projects</a>
       <a href="facts.html">Facts</a>
@@ -36,6 +36,41 @@
   </footer>
 
   <script>
+    // A few soft dots drift behind the card and ease away from the cursor.
+    (() => {
+      const cv = document.getElementById('drift'), ctx = cv.getContext('2d');
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      let w, h, dots = [], mouse = { x: -1e4, y: -1e4 };
+      const color = () => getComputedStyle(cv).getPropertyValue('--accent').trim();
+      function size() {
+        const dpr = Math.min(devicePixelRatio || 1, 2);
+        w = innerWidth; h = innerHeight; cv.width = w * dpr; cv.height = h * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      }
+      function seed() {
+        dots = Array.from({ length: 18 }, () => ({
+          x: Math.random() * w, y: Math.random() * h, r: 2 + Math.random() * 4,
+          a: Math.random() * Math.PI * 2, s: 0.1 + Math.random() * 0.2, o: 0.25 + Math.random() * 0.35,
+        }));
+      }
+      addEventListener('resize', () => { size(); });
+      addEventListener('pointermove', e => { mouse = { x: e.clientX, y: e.clientY }; });
+      addEventListener('pointerleave', () => { mouse = { x: -1e4, y: -1e4 }; });
+      size(); seed();
+      (function frame(t) {
+        ctx.clearRect(0, 0, w, h); ctx.fillStyle = color();
+        for (const d of dots) {
+          d.a += (Math.random() - 0.5) * 0.08;
+          d.x += Math.cos(d.a) * d.s; d.y += Math.sin(d.a) * d.s - 0.05;
+          const dx = d.x - mouse.x, dy = d.y - mouse.y, dist = Math.hypot(dx, dy);
+          if (dist < 140) { d.x += dx / dist * (140 - dist) * 0.04; d.y += dy / dist * (140 - dist) * 0.04; }
+          if (d.x < -20) d.x = w + 20; if (d.x > w + 20) d.x = -20; if (d.y < -20) d.y = h + 20; if (d.y > h + 20) d.y = -20;
+          ctx.globalAlpha = d.o * (0.75 + 0.25 * Math.sin(t * 0.001 + d.a));
+          ctx.beginPath(); ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2); ctx.fill();
+        }
+        requestAnimationFrame(frame);
+      })(0);
+    })();
+
     // Copy the email address to the clipboard and show a short confirmation in place of the label.
     document.querySelectorAll('.copy').forEach(btn => {
       const label = btn.textContent;
