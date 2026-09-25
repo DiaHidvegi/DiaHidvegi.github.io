@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dia Hidvégi</title>
-  <meta name="description" content="Dia Hidvégi, AI research scientist and principal data scientist.">
+  <title>Projects · Dia Hidvégi</title>
   <meta name="color-scheme" content="light dark">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,25 +13,21 @@
 </head>
 <body>
   <header class="top">
-    <a class="home" href="./" aria-current="page">Dia Hidvégi</a>
+    <a class="home" href="./">Dia Hidvégi</a>
     <nav>
-      <a href="projects.html">Projects</a>
+      <a href="projects.html" aria-current="page">Projects</a>
       <a href="facts.html">Facts</a>
     </nav>
   </header>
 
-  <main class="hero">
-    <div class="card">
-      <img src="assets/profile.jpg" alt="Dia Hidvégi">
-      <h1>Dia Hidvégi</h1>
-      <p>AI Research Scientist · Principal Data Scientist at Intelmatix</p>
-    </div>
-  </main>
+  <main class="grid" id="grid" aria-label="Projects"></main>
 
-  <footer class="foot">
-    <a href="mailto:dianahidvegi@gmail.com">Email</a>
-    <a href="https://github.com/DiaHidvegi" target="_blank" rel="noopener">GitHub</a>
-    <a href="https://www.linkedin.com/in/dianahidvegi/" target="_blank" rel="noopener">LinkedIn</a>
-  </footer>
+  <dialog class="detail" id="detail" aria-label="Project details">
+    <div class="inner"></div>
+  </dialog>
+
+  <script src="projects.js"></script>
+  <script src="sketches.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
