@@ -106,7 +106,7 @@ const PROJECTS = [
     ],
     "short": "Curriculum Learning for Visual RL",
     "viz": {
-      "image": "assets/curriculum-learning.png"
+      "type": "curves"
     },
     "links_label": "Stack"
   },
@@ -174,7 +174,7 @@ const PROJECTS = [
     ],
     "short": "Visual Odometry",
     "viz": {
-      "image": "assets/visual-odometry.jpg"
+      "type": "odometry"
     },
     "links_label": "Stack"
   },
@@ -286,7 +286,7 @@ const PROJECTS = [
     ],
     "short": "Geospatial Site Selection",
     "viz": {
-      "image": "assets/accessibility-heatmap.png"
+      "type": "sites"
     },
     "links_label": "Stack"
   },
