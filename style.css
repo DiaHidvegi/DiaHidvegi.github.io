@@ -89,8 +89,14 @@ img { display: block; max-width: 100%; height: auto; }
   font-size: 12px;
   letter-spacing: 0.04em;
 }
-.foot a { color: var(--muted); }
-.foot a:hover { color: var(--ink); }
+.foot a, .foot .copy { color: var(--muted); }
+.foot a:hover, .foot .copy:hover { color: var(--ink); }
+.foot .copy {
+  background: none; border: 0; padding: 0; margin: 0;
+  font: inherit; letter-spacing: inherit; cursor: pointer;
+  transition: color 0.15s;
+}
+.foot .copy.done { color: var(--ink); }
 
 /* ---------- Projects grid ---------- */
 
