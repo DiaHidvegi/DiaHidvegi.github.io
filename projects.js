@@ -22,8 +22,8 @@ const PROJECTS = [
     },
     "links_label": "Stack",
     "media": {
-      "video": null,
-      "image": "assets/media/dexterous.jpg",
+      "video": "assets/media/dexterous.mp4",
+      "poster": "assets/media/dexterous-poster.jpg",
       "alt": "Teleoperating the ORCA robot hand on a Franka arm with a data glove, placing an egg into a carton"
     },
   },
