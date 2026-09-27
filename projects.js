@@ -5,23 +5,42 @@ const PROJECTS = [
     "meta": "Soft Robotics Lab, ETH Zürich, 2026 - present. Supervisors: Chenyu Yang, Davide Liconti, Prof Dr Robert Katzschmann",
     "paragraphs": [
       "A co-embedded graph of hand postures spanning end effectors with different morphologies and degrees of freedom, built for generalized posture mapping. The graph captures how postures relate to one another and supports representation learning on a nonlinear manifold, yielding a single shared representation across hands.",
-      "The embedding serves two purposes: as input for training a neural cross-embodiment retargeter between N-DoF hands, and as a compact posture representation that improves sample efficiency in reinforcement learning and other downstream tasks."
+      "The embedding serves as input for training a neural cross-embodiment retargeter between N-DoF hands. It may also provide a compact posture representation to improve sample efficiency in reinforcement learning and other downstream tasks."
     ],
-    "figures": [],
+    "figures": [
+      {
+        "video": "assets/media/dexterous-retarget.mp4",
+        "poster": "assets/media/dexterous-retarget-poster.jpg",
+        "alt": "A tracked human hand mesh on the left and the ORCA robot hand on the right, mirroring its posture in real time",
+        "caption": "Live retargeting: the tracked human hand (left) and the ORCA hand (right) following it through the learned shared posture space."
+      }
+    ],
     "links": [],
     "short": "Dexterous Manipulation",
     "viz": {
       "type": "orbit"
     },
-    "links_label": "Stack"
+    "links_label": "Stack",
+    "media": {
+      "video": null,
+      "image": "assets/media/dexterous.jpg",
+      "alt": "Teleoperating the ORCA robot hand on a Franka arm with a data glove, placing an egg into a carton"
+    },
   },
   {
     "title": "Vision-Language-Action Models for Pick-and-Place",
     "meta": "ETH Zürich, 2026",
     "paragraphs": [
-      "Fine-tuned SmolVLA, π0, π0.5, OpenVLA and FlowerVLA on LeRobot teleoperation demonstrations for two pick-and-place tasks: sorting objects into color-matched bowls, and placing objects on photos of out-of-distribution celebrities."
+      "Fine-tuned SmolVLA, π0, π0.5, OpenVLA and FlowerVLA on LeRobot teleoperation demonstrations for two pick-and-place tasks: sorting objects into bowls, and placing objects on photos of celebrities.",
+      "The goal was strong performance on both halves of the model: the visual backbone and language understanding. Bowl commands went beyond naming a colour, with instructions such as “Put the banana into the 2nd bowl from the left” or “Place the banana into the bowl that is not green or blue”. For the celebrity task, the model also had to recognise out-of-distribution celebrities it had never seen in training."
     ],
-    "figures": [],
+    "figures": [
+      {
+        "src": "assets/media/vla-photo.jpg",
+        "alt": "The SO-101 arm on its overhead camera rig, with celebrity photos and a can on the table, the leader arm and a laptop running the policy in the foreground",
+        "caption": "The setup for the third task: the arm, its camera rig, the leader arm used for teleoperation, and the celebrity photos as placement targets."
+      }
+    ],
     "links": [
       {
         "name": "LeRobot",
@@ -48,7 +67,16 @@ const PROJECTS = [
     "viz": {
       "type": "sort"
     },
-    "links_label": "Stack"
+    "links_label": "Stack",
+    "media": {
+      "video": "assets/media/vla.mp4",
+      "poster": "assets/media/vla-poster.jpg",
+      "alt": "SO-101 arm picking up a banana and dropping it into a red bowl"
+    },
+    "points": [
+      "Setup: an SO-101 arm with a single wrist camera, trained on 150 to 200 teleoperated demonstrations recorded with a leader arm.",
+      "Lessons: adding the end-effector height to the state fixed early grasping, and unfreezing the vision encoder was needed for the model to learn bowl colours."
+    ]
   },
   {
     "title": "NAICS-Aware Graph Neural Networks for Large-Scale POI Co-visitation Prediction",
@@ -57,7 +85,14 @@ const PROJECTS = [
       "A GraphSAGE-based architecture that combines learnable embeddings of the NAICS business taxonomy with multi-modal spatial and temporal features to predict population-level co-visitation between 92,486 brands across 48 US states.",
       "By learning relationships between business categories end to end on 45.3 million graph edges, the model improves R² by 157% over state-of-the-art baselines and makes edge regression tractable on extremely sparse co-visitation networks."
     ],
-    "figures": [],
+    "figures": [
+      {
+        "src": "assets/media/naics-architecture.png",
+        "alt": "Full model architecture from NAICS code embeddings through node fusion, a five-layer GraphSAGE encoder, edge assembly and an edge MLP",
+        "caption": "Model architecture, from the paper.",
+        "tall": true
+      }
+    ],
     "links": [
       {
         "name": "arXiv:2507.19697",
@@ -68,7 +103,12 @@ const PROJECTS = [
     "viz": {
       "type": "network"
     },
-    "links_label": "Paper"
+    "links_label": "Paper",
+    "media": {
+      "image": "assets/media/naics-tile.png",
+      "alt": "Model architecture detail: GraphSAGE encoder, edge assembly and edge MLP producing the co-visitation prediction",
+      "detail": false
+    }
   },
   {
     "title": "Curriculum Learning for Visual Model-Based RL for Continuous Robotics Tasks",
@@ -79,7 +119,8 @@ const PROJECTS = [
     "figures": [
       {
         "src": "assets/curriculum-learning.png",
-        "alt": "Smoothed learning curves comparing curriculum training against the baseline over 800 thousand training steps"
+        "alt": "Smoothed learning curves comparing curriculum training against the baseline over 800 thousand training steps",
+        "caption": "Episode score over training: the curriculum run (green) against the baseline (pink)."
       }
     ],
     "links": [
@@ -108,7 +149,12 @@ const PROJECTS = [
     "viz": {
       "type": "curves"
     },
-    "links_label": "Stack"
+    "links_label": "Stack",
+    "media": {
+      "video": "assets/media/hopper.mp4",
+      "poster": "assets/media/hopper-poster.jpg",
+      "alt": "Three MuJoCo hoppers side by side: standing low, standing taller, and hopping forward"
+    }
   },
   {
     "title": "Energy-efficient Path Planning for Autonomous Drones in Inspection Tasks",
@@ -119,11 +165,15 @@ const PROJECTS = [
     "figures": [
       {
         "src": "assets/drone-energy-velocity.png",
-        "alt": "Energy per unit length and power consumption as a function of velocity"
+        "alt": "Energy per unit length and power consumption as a function of velocity",
+        "caption": "Energy per metre (left) and power (right) as functions of flight speed. Energy used per metre is lowest at around 10 to 13 m/s, while the power demand rises steeply above that.",
+        "wide": true
       },
       {
         "src": "assets/drone-energy-radii.png",
-        "alt": "Energy consumption as a function of velocity for different turning radii"
+        "alt": "Energy consumption as a function of velocity for different turning radii",
+        "caption": "Energy used per metre in a turn, against flight speed, for turning radii from 3 to 10 m. Tighter turns cost more energy, and are cheapest at lower speeds.",
+        "wide": true
       }
     ],
     "links": [
@@ -144,7 +194,13 @@ const PROJECTS = [
     "viz": {
       "type": "tree"
     },
-    "links_label": "Stack"
+    "links_label": "Stack",
+    "media": {
+      "video": "assets/media/drone.mp4",
+      "poster": "assets/media/drone-poster.jpg",
+      "alt": "A small drone flying through an indoor hall",
+      "detail": false
+    }
   },
   {
     "title": "Visual Odometry Pipeline",
@@ -176,7 +232,12 @@ const PROJECTS = [
     "viz": {
       "type": "odometry"
     },
-    "links_label": "Stack"
+    "links_label": "Stack",
+    "media": {
+      "video": "assets/media/visual-odometry.mp4",
+      "poster": "assets/media/visual-odometry-poster.jpg",
+      "alt": "Visual odometry dashboard: tracked features on a street scene, landmark counts, global and local trajectory"
+    }
   },
   {
     "title": "Knowledge Graph Retrieval-Based LLM Agent for Factual Querying",
@@ -211,7 +272,15 @@ const PROJECTS = [
     "viz": {
       "type": "walker"
     },
-    "links_label": "Stack"
+    "links_label": "Stack",
+    "media": {
+      "video": "assets/media/knowledge-graph.mp4",
+      "poster": "assets/media/knowledge-graph-poster.jpg",
+      "alt": "A question about Titanic is matched to its Wikidata entity, a SPARQL query follows the director edge to James Cameron, and the agent answers"
+    },
+    "points": [
+      "The animation above is a very simplified example, for illustration only."
+    ]
   },
   {
     "title": "Vision-based Traffic Surveillance",
@@ -239,6 +308,11 @@ const PROJECTS = [
     "short": "Traffic Surveillance",
     "viz": {
       "type": "traffic"
+    },
+    "media": {
+      "video": "assets/media/traffic.mp4",
+      "poster": "assets/media/traffic-poster.jpg",
+      "alt": "Street camera view with tracked vehicles in bounding boxes and live zone counts, including a restricted-zone alert"
     }
   },
   {
@@ -249,6 +323,12 @@ const PROJECTS = [
       "The value prediction model takes accessibility scores, market saturation, a cannibalization score derived from a location's catchment and surrounding road network, and a set of demographic variables. It can be trained on different targets, such as future sales for a site or the value of land or real estate, which lets the engine extend to a range of urban and geospatial analytics use cases."
     ],
     "figures": [
+      {
+        "caption": "Road network of Riyadh as modelled by the engine.",
+        "video": "assets/media/site-selection.mp4",
+        "poster": "assets/media/site-selection-poster.jpg",
+        "alt": "Road network of Riyadh"
+      },
       {
         "src": "assets/accessibility-heatmap.png",
         "alt": "Heatmap of accessibility scores for 853 parcels zoned for restaurants"
@@ -288,7 +368,12 @@ const PROJECTS = [
     "viz": {
       "type": "sites"
     },
-    "links_label": "Stack"
+    "links_label": "Stack",
+    "media": {
+      "video": "assets/media/site-selection.mp4",
+      "poster": "assets/media/site-selection-poster.jpg",
+      "alt": "Road network of Riyadh rendered by the site selection engine, zooming out from a district to the whole city"
+    }
   },
   {
     "title": "Healthcare Agent-based Policy Simulator with Learned Action Functions",
