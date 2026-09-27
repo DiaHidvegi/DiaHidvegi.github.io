@@ -7,13 +7,14 @@
   --line: #e9e2dc;
   --tile: #f1ebe5;
   --accent: #c4788a;
+  --tile-ink: #6f6560;
   --sans: "Inter", system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
   --serif: "Fraunces", "Iowan Old Style", Georgia, serif;
   --mono: var(--sans);
   --gutter: clamp(16px, 4vw, 48px);
 }
 @media (prefers-color-scheme: dark) {
-  :root { --bg: #171312; --ink: #f2ebe6; --muted: #8a7f7a; --line: #2d2624; --tile: #211c1a; --accent: #d98ea0; }
+  :root { --bg: #171312; --ink: #f2ebe6; --muted: #8a7f7a; --line: #2d2624; --tile: #211c1a; --accent: #d98ea0; --tile-ink: var(--ink); }
 }
 
 /* Cross-page fade (browsers that support cross-document view transitions) */
@@ -130,7 +131,7 @@ img { display: block; max-width: 100%; height: auto; }
   cursor: pointer;
   border: 0;
   padding: 0;
-  color: var(--ink);
+  color: var(--tile-ink);
   text-align: left;
   font: inherit;
   transition: transform 0.25s ease, background 0.35s ease, color 0.35s ease;
