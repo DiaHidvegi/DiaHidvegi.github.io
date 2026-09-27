@@ -31,8 +31,8 @@ const PROJECTS = [
     "title": "Vision-Language-Action Models for Pick-and-Place",
     "meta": "ETH Zürich, 2026",
     "paragraphs": [
-      "Fine-tuned SmolVLA, π0, π0.5, OpenVLA and FlowerVLA on LeRobot teleoperation demonstrations for two pick-and-place tasks: sorting objects into bowls, and placing objects on photos of celebrities.",
-      "The goal was strong performance on both halves of the model: the visual backbone and language understanding. Bowl commands went beyond naming a colour, with instructions such as “Put the banana into the 2nd bowl from the left” or “Place the banana into the bowl that is not green or blue”. For the celebrity task, the model also had to recognise out-of-distribution celebrities it had never seen in training."
+      "Fine-tuned SmolVLA, π0, π0.5, OpenVLA and FlowerVLA on LeRobot teleoperation demonstrations for two pick-and-place tasks: placing a banana into one of three bowls, and placing a can onto the photo of a named celebrity.",
+      "The goal was strong performance on both halves of the model: the visual backbone and language understanding. Bowl commands went beyond naming a colour, with instructions such as “Put the banana into the 2nd bowl from the left” or “Place the banana into the bowl that is not green or blue”. For the celebrity task, the model had to find the right person even when that celebrity never appeared in the training data."
     ],
     "figures": [
       {
