@@ -2,7 +2,7 @@
 const PROJECTS = [
   {
     "title": "Dexterous Manipulation via Embedded Posture Graphs of Hands with N-DoF",
-    "meta": "Soft Robotics Lab, ETH Zürich, 2026 - present. Supervisors: Chenyu Yang, Davide Liconti, Prof Dr Robert Katzschmann",
+    "meta": "Soft Robotics Lab, ETH Zürich, 2026 - present. Collaborator: Leonard Wagner. Supervisors: Chenyu Yang, Denis Tarasov, Davide Liconti, Prof Dr Robert Katzschmann",
     "paragraphs": [
       "A co-embedded graph of hand postures spanning end effectors with different morphologies and degrees of freedom, built for generalized posture mapping. The graph captures how postures relate to one another and supports representation learning on a nonlinear manifold, yielding a single shared representation across hands.",
       "The embedding serves as input for training a neural cross-embodiment retargeter between N-DoF hands. It may also provide a compact posture representation to improve sample efficiency in reinforcement learning and other downstream tasks."
